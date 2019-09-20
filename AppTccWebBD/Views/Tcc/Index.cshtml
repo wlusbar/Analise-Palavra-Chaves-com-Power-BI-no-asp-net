@@ -1,0 +1,123 @@
+﻿@model IEnumerable<AppTccWebBD.Models.Tcc>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+
+
+
+        <!--Coluna lateral esquerda-->
+        <div class="col-xs-12 col-sm-12 col-md-12 panel-collapse">
+            <div class="col-xs-2 col-sm-1 col-md-2 panel-collapse">
+                <div>
+                    <img src="/img/si.png" width="100" height="100" />
+                </div>
+                <form name="simpleSearch" id="simpleSearch" method="post" action="resultadoBusca">
+
+                    <div class="input-line">
+                        <label for="tituloautor">Titulo ou Autor</label>
+                        <select name="Titulo ou Autor" id="tituloautor" title="tituloautor">
+                            <option value="1">Titulo</option>
+                            <option value="2">Autor</option>
+                            <option value="3">Palavra Chave</option>
+                        </select>
+                    </div>
+                </form>
+
+
+                <!--Codigo Pesquisar-->
+                <form asp-action="Index" method="get">
+                    <div class="form-action no-color">
+                        <p>
+                            Procurar por nome:
+                            <br /> 
+                            <input type="text"  name="filtroPalavraChave" value="@ViewData["filtroPalavraChave"]" />
+                            <br />
+                            <input type="submit" value="Procurar" class="btn btn-default" />|
+                            <br />
+                            <a asp-action="Index">Retornar para a Lista completa</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+
+        <!--Conteudo da Pagina-->
+        <div class="col-xs-10 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-0 ">
+            <h2 class="page-header">Trabalhos de Conclusão de Curso</h2>
+            <div class="table-responsive">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+
+                            <th>
+                                @Html.DisplayNameFor(model => model.Titulo)
+                            </th>
+
+                            
+                            <th>
+                                @Html.DisplayNameFor(model => model.Semestre)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Ano)
+                            </th>
+                            
+                            <th>
+                                @Html.DisplayNameFor(model => model.Aluno)
+                            </th>
+
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+
+                                <td>
+                                    <a asp-action="Details" asp-route-id="@item.AlunoId">
+                                        @Html.DisplayFor(modelItem => item.Titulo)
+                                    </a>
+
+                                </td>
+
+                                <td>
+                                    <a asp-action="Details" asp-route-id="@item.AlunoId">
+                                        @Html.DisplayFor(modelItem => item.Semestre)
+                                    </a>
+                                </td>
+                                <td>
+                                    <a asp-action="Details" asp-route-id="@item.AlunoId">
+                                        @Html.DisplayFor(modelItem => item.Ano)
+                                    </a>
+                                </td>
+
+                                <td>
+                                    <a asp-action="Details" asp-route-id="@item.AlunoId">
+                                        @Html.DisplayFor(modelItem => item.Aluno)
+                                    </a>
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>

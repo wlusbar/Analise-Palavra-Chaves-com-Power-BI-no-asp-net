@@ -1,0 +1,97 @@
+﻿@model AppTccWebBD.Models.Tcc
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h3>Detalhe de Tcc</h3>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aluno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Aluno)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.Resumo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resumo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Semestre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Semestre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ano)
+        </dd>
+        <dt>
+           Menção Honrosa
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mencao)
+        </dd>
+        <dt>
+            Palavras chaves
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Chave1)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chave2)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chave3)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chave4)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chave5)
+        </dd>
+        <dt>
+            Orientador
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OrientatadorTcc)
+        </dd>
+
+        <dt>
+            Avaliador
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AvaliadorApresentacao)
+        </dd>
+    </dl>
+</div>
+<div>
+    <div class="col-sm-10 col-md-2 sidebar">
+        
+    </div>
+    <div class="col-sm-2 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <a asp-action="Index"><h4>Voltar</h4></a>
+    </div>
+    </div>

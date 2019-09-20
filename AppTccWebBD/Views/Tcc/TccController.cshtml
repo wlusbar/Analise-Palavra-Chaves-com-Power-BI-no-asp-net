@@ -1,0 +1,113 @@
+﻿@model IEnumerable<AppTccWebBD.Models.Tcc>
+
+@{
+    ViewData["Title"] = "TccController";
+}
+
+<h2>TccController</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AlunoId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aluno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrientatadorTcc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvaliadorApresentacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resumo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Semestre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mencao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chave1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chave2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chave3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chave4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chave5)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlunoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aluno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrientatadorTcc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvaliadorApresentacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resumo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Semestre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ano)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mencao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chave1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chave2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chave3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chave4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chave5)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

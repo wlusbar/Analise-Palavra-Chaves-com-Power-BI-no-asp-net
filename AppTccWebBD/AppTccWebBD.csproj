@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\NovaPasta1\**" />
+    <Compile Remove="wwwroot\lib\bootstrap\css\**" />
+    <Compile Remove="wwwroot\lib\bootstrap\fonts\**" />
+    <Compile Remove="wwwroot\lib\bootstrap\js\**" />
+    <Content Remove="Views\NovaPasta1\**" />
+    <Content Remove="wwwroot\lib\bootstrap\css\**" />
+    <Content Remove="wwwroot\lib\bootstrap\fonts\**" />
+    <Content Remove="wwwroot\lib\bootstrap\js\**" />
+    <EmbeddedResource Remove="Views\NovaPasta1\**" />
+    <EmbeddedResource Remove="wwwroot\lib\bootstrap\css\**" />
+    <EmbeddedResource Remove="wwwroot\lib\bootstrap\fonts\**" />
+    <EmbeddedResource Remove="wwwroot\lib\bootstrap\js\**" />
+    <None Remove="Views\NovaPasta1\**" />
+    <None Remove="wwwroot\lib\bootstrap\css\**" />
+    <None Remove="wwwroot\lib\bootstrap\fonts\**" />
+    <None Remove="wwwroot\lib\bootstrap\js\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Analise.cshtml.cs" />
+    <Compile Remove="Views\Tcc\Analise.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Analise.cshtml" />
+    <Content Remove="Views\Tcc\Analise.cshtml" />
+    <Content Remove="wwwroot\Estagios.html" />
+    <Content Remove="wwwroot\index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Tcc\Analise.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
+</Project>
