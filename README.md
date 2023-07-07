@@ -46,7 +46,11 @@ No Gráfico 3, foram demonstrados os processos mais utilizados pelos alunos para
 - Excel
 - SQL Data tools Integration Services (SSIS)
 - Microsoft Power BI
-  
+
+## Como Contribuir
+- Alterar o modelo de relacionamento de tabelas de acordo com as melhores práticas.
+- Migrar a base de dados para o ambiente cloud
+
 ## Autor
 - Wellington Luiz
 
