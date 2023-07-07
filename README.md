@@ -1,4 +1,4 @@
-# Analise Palavra Chaves com Power BI no asp net
+# Analise Palavra Chaves com Power BI no ASP.NET Core
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/wlusbar/Analise-Palavra-Chaves-com-Power-BI-no-asp-net/blob/master/LICENSE)
 
 ## Sobre o Projeto
